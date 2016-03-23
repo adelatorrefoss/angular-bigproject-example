@@ -1,0 +1,18 @@
+include ../mixin.jade
+
+h1 Hello {{home.name}}
+
+
+ul
+  li
+    a(href='login') link to Login
+  li
+    a(href='dashboard') link to Dashboard
+  li
+    a(href='detail/5') link to detail
+  li
+    a(href='reports') link to Reports
+
+div que tal, como estas {{$ctrl.name}}
+
++show_icon("arrow-right")

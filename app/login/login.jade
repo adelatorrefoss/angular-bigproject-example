@@ -1,0 +1,19 @@
+include ../mixin.jade
+
++show_icon("arrow-right")
+
+div
+  form.simple-form(novalidate='')
+    div
+      | E-mail:
+      br
+      input(id='email',type='email', ng-model='$ctrl.user.email')
+    div
+      | Password:
+      br
+      input(id='password',type='password', ng-model='$ctrl.user.password')
+    div
+      input(id='submit',type='submit', ng-click='$ctrl.loginRequest($ctrl.user)', value='Login', ng-disabled="$ctrl.inProgress")
+
+  div Error:
+    span(id="errors") {{$ctrl.errors}}
